@@ -1,0 +1,11 @@
+mixin select(label,  ...items)
+    +e.select__&attributes(attributes)
+        if(label)
+            +e.label.p !{label}
+        +e.parent
+            +e.SELECT.hidden.js-select
+                - var count = 0;
+                each item in items
+                    - var checked = count == 0;
+                    +e.OPTION.option(val=count) !{item}
+                    - count++;

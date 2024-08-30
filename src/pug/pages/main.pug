@@ -1,0 +1,16 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Главная страница';
+	- banner = 'Телефоны для вызова эвакуатора в <span>Москве</span>';
+
+block content
+	include ../modules/cards
+	include ../modules/banner
+	include ../modules/call
+	include ../modules/know
+	include ../modules/inside
+	include ../modules/advantages
+	include ../modules/weight
+	include ../modules/info
+	include ../modules/price

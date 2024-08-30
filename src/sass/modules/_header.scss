@@ -1,0 +1,123 @@
+.header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--color-white);
+  z-index: 99999;
+  transition: all linear .2s;
+
+  &.is-sticky {
+    .header__inner {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      box-shadow: .2rem .2rem 1rem .2rem rgba(39, 52, 58, 0.15);
+    }
+
+    .header__banner {
+      min-height: 0;
+      height: 0;
+      overflow: hidden;
+      padding: 0;
+    }
+  }
+
+  &__banner {
+    position: relative;
+    min-height: 14rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 5rem;
+    z-index: 1;
+    transition: all linear .2s;
+
+    @include large-desktop {
+      min-height: 10rem;
+    }
+
+    @include large-mobile {
+      min-height: 5rem;
+      padding: 1.5rem;
+    }
+  }
+
+  &__inner {
+    padding: 2.1rem 10rem;
+    transition: all linear .2s;
+
+    @include large-desktop {
+      padding: 1.8rem 7rem;
+    }
+
+    @include large-tablet {
+      padding: 1.5rem 3rem;
+    }
+
+    @include large-mobile {
+      padding: 1rem 1.5rem;
+    }
+  }
+
+  &__bg {
+    z-index: -1;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--color-white);
+
+    span {
+      color: #6AD3FF;
+      border-bottom: 2px solid #6AD3FF;
+    }
+
+    @include large-desktop {
+      font-size: 4rem;
+    }
+
+    @include large-tablet {
+      font-size: 3.4rem;
+    }
+
+    @include large-mobile {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__hamburger {
+    display: none;
+
+    @include large-mobile {
+      display: block;
+    }
+  }
+
+  &__menu {
+    margin-left: auto;
+    margin-right: 13.5rem;
+
+    @include large-desktop {
+      margin-right: 10rem;
+    }
+
+    @include large-tablet {
+      margin-right: 5rem;
+    }
+
+    @include large-mobile {
+      display: none;
+      order: 1;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include min-large-mobile {
+      display: block !important;
+      transition: none !important;
+      height: auto !important;
+    }
+  }
+}

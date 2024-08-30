@@ -1,0 +1,118 @@
+$large_desktop: 1440px;
+$small_desktop: 1280px;
+
+$large_tablet: 1024px;
+$small_tablet: 768px;
+
+$large_mobile: 580px;
+$small_mobile: 440px;
+
+
+// max-screen
+@mixin hd() {
+  @media only screen and (max-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin mackbook() {
+  @media only screen and (max-width: 1700px) {
+    @content;
+  }
+}
+
+@mixin large-desktop() {
+  @media only screen and (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin small-desktop() {
+  @media only screen and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin large-tablet() {
+  @media only screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin small-tablet() {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin large-mobile() {
+  @media only screen and (max-width: 580px) {
+    @content;
+  }
+}
+
+@mixin small-mobile() {
+  @media only screen and (max-width: 420px) {
+    @content;
+  }
+}
+// min-screeen
+
+@mixin min-hd() {
+  @media only screen and (min-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin min-mackbook() {
+  @media only screen and (min-width: 1700px) {
+    @content;
+  }
+}
+
+@mixin min-large-desktop() {
+  @media only screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin min-small-desktop() {
+  @media only screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin min-large-tablet() {
+  @media only screen and (min-width: 1120px) {
+    @content;
+  }
+}
+
+@mixin min-middle-tablet() {
+  @media only screen and (min-width: 980px) {
+    @content;
+  }
+}
+
+@mixin min-small-tablet() {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin min-large-mobile() {
+  @media only screen and (min-width: 581px) {
+    @content;
+  }
+}
+
+@mixin min-small-mobile() {
+  @media only screen and (min-width: 420px) {
+    @content;
+  }
+}
+
+@mixin line-height ($size, $height) {
+  font-size: ($size/10 + rem);
+  line-height: ($height / $size) * 1;
+}

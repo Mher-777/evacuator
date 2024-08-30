@@ -1,0 +1,60 @@
+.footer {
+  background-color: #586C75;
+  padding: 4rem 0 8.5rem;
+
+  @include large-desktop {
+    padding-bottom: 7rem;
+  }
+
+  @include large-mobile {
+    padding: 3rem 0 5rem;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+
+    @include large-mobile {
+      display: block;
+    }
+  }
+
+  &__logo {
+    margin-right: 7.5rem;
+
+    @include large-tablet {
+      margin-right: 5rem;
+    }
+
+    @include large-mobile {
+      margin-right: 0;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    column-gap: 6rem;
+    row-gap: 2rem;
+
+    @include large-desktop {
+      column-gap: 3rem;
+    }
+  }
+
+  &__item {
+    font-size: 1.6rem;
+  }
+
+  &__link {
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+    }
+  }
+}

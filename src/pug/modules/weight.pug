@@ -1,0 +1,67 @@
+-
+    var weightSettings = {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        loop: false,
+        spaceBetween: 15,
+        autoHeight: true,
+
+        pagination: {
+            el: ".weight__pagination",
+            dynamicBullets: true,
+            clickable: true
+        },
+
+        breakpoints: {
+            581: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                spaceBetween: 30,
+                autoHeight: false,
+
+                navigation: {
+                    nextEl: ".weight__navigation-next",
+                    prevEl: ".weight__navigation-prev",
+                },
+            }
+        }
+    }
+
+section.weight
+    .container
+        .weight__top
+            h3.title.weight__title Какой вес может взять на борт эвакуатор
+            p.weight__text Эвакуатор используют для перевозки всех видов автотранспорта: от небольших квадроциклов до габаритных коммерческих авто. Эвакуатор способен транспортировать автомобили до 8 т. <br><br> <strong>Виды эвакуаторов, доступные для заказа на ТутЭвакуатор.Ру:</strong>
+        .weight__wrapper
+            .swiper.weight__slider.js-slider(data-settings=weightSettings)
+                .swiper-wrapper
+                    .swiper-slide
+                        .weight__slide
+                            h3.weight__subtitle Эвакуатор с краном-манипулятором и прямой платформой
+                            .weight__image
+                                img(src="/img/weight_1.png" alt="Эвакуатор с краном-манипулятором и прямой платформой").object-fit
+                            p.weight__desc Компактный и маневренный эвакуатор для транспортировки авто массой до 3,5 т. За счет вылета стрелы манипулятор осуществляет погрузку/разгрузку ТС с расстояния до 5 м. Он удобен для эвакуации автомобилей с узких улиц/дворов, небольших стоянок/парковок Москвы.
+                    .swiper-slide
+                        .weight__slide
+                            h3.weight__subtitle Эвакуатор с манипулятором и ломаной / сдвижной платформой
+                            .weight__image
+                                img(src="/img/weight_2.png" alt="Эвакуатор с манипулятором и ломаной / сдвижной платформой").object-fit
+                            p.weight__desc Универсальный и надежный эвакуатор для эвакуации любых видов транспортных средств, включая крупную сельскохозяйственную/строительную/коммунальную технику, а также авто с низким клиренсом. Этот тип эвакуатора может быть задействован при перевозке как сильно пострадавших в аварии автомобилей, так и ТС, которые в состоянии самостоятельно заехать на платформу эвакуатора.
+                    .swiper-slide
+                        .weight__slide
+                            h3.weight__subtitle Эвакуатор с лебедкой и платформой с аппарелями
+                            .weight__image
+                                img(src="/img/weight_3.png" alt="Эвакуатор с лебедкой и платформой с аппарелями").object-fit
+                            p.weight__desc Используется для перевозки ТС массой до 7 т. Автомобиль затаскивают на платформу эвакуатора по направляющим при помощи электрической/гидравлической/ручной лебедки. Эвакуатор данной модификации не применяется для транспортировки авто с АКПП или заблокированными колесами.
+                    .swiper-slide
+                        .weight__slide
+                            h3.weight__subtitle Эвакуатор с лебедкой и укороченной базой для частичной погрузки авто
+                            .weight__image
+                                img(src="/img/weight_4.png" alt="Эвакуатор с лебедкой и укороченной базой для частичной погрузки авто").object-fit
+                            p.weight__desc Основное назначение – транспортировка крупнотоннажной спецтехники, грузовых авто, автобусов.
+                .weight__pagination
+            .weight__navigation
+                .weight__navigation-button.weight__navigation-prev
+                    +icon('arrow')
+                .weight__navigation-button.weight__navigation-next
+                    +icon('arrow')

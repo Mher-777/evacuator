@@ -1,0 +1,132 @@
+.weight {
+  padding: 10rem 0;
+
+  @include large-desktop {
+    padding: 8rem 0;
+  }
+
+  @include large-tablet {
+    padding: 5rem 0;
+  }
+
+  &__top {
+    max-width: 125rem;
+    margin-bottom: 3rem;
+  }
+
+  &__title {
+    margin-bottom: 4.5rem;
+
+    @include large-mobile {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__slide {
+    padding: 4rem;
+    background: var(--color-white);
+    box-shadow: .2rem .2rem 1rem .2rem rgba(39, 52, 58, 0.15);
+    border-radius: 2rem;
+    overflow: hidden;
+    height: 100%;
+
+    @include large-tablet {
+      padding: 3rem;
+    }
+
+    @include large-mobile {
+      height: auto;
+    }
+  }
+
+  &__slider {
+    padding: 2rem;
+    margin: -2rem;
+    .swiper-slide {
+      height: auto;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+    margin: 3rem auto 0;
+    span {
+      width: 1.2rem;
+      height: 1.2rem;
+      flex-shrink: 0;
+      background-color: #B3C8D1;
+      border-radius: 50%;
+      cursor: pointer;
+      &.swiper-pagination-bullet-active {
+        background-color: var(--color-accent);
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    padding-top: 322 / 604 * 100%;
+    margin-bottom: 2rem;
+  }
+
+  &__navigation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    width: calc(100% + 16.8rem);
+    left: calc(-16.8rem / 2);
+    pointer-events: none;
+
+    @include large-desktop {
+      width: calc(100% + 14rem);
+      left: calc(-14rem / 2);
+    }
+
+    @include large-tablet {
+      display: none;
+    }
+
+    &-prev {
+      .icon {
+        transform: rotate(180deg);
+      }
+    }
+
+    &-button {
+      width: 5.2rem;
+      height: 5.2rem;
+      border: 1px solid var(--color-accent);
+      border-radius: .6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all linear .2s;
+      pointer-events: auto;
+      .icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: none;
+        stroke: var(--color-accent);
+        transition: all linear .2s;
+      }
+
+      &:hover {
+        background-color: var(--color-accent);
+        .icon {
+          stroke: var(--color-white);
+        }
+      }
+    }
+  }
+}

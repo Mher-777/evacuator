@@ -1,0 +1,51 @@
+.menu {
+  @include large-mobile {
+    border-top: 1px solid var(--color-accent);
+    border-bottom: 1px solid var(--color-accent);
+    width: calc(100% + 3rem);
+    margin: 0 -1.5rem -1rem;
+    overflow: hidden;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 7.5rem;
+    list-style: none;
+
+    @include large-tablet {
+      gap: 4rem;
+    }
+
+    @include large-mobile {
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      gap: 2rem;
+      padding: 2rem;
+    }
+  }
+
+  &__item {
+    text-transform: uppercase;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -.2rem;
+      height: .2rem;
+      width: 0;
+      transition: all linear .2s;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--color-accent);
+    }
+
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+}

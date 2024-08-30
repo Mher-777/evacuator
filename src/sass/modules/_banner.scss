@@ -1,0 +1,52 @@
+.banner {
+  position: relative;
+  padding: .9rem 0;
+
+  @include large-mobile {
+    padding-bottom: 2rem;
+  }
+
+  &__bg {
+    z-index: -1;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    @include large-mobile {
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  &__btn {
+    margin-left: auto;
+
+    @include large-mobile {
+      margin-right: auto;
+    }
+  }
+
+  &__icon {
+    width: 21rem;
+    margin-right: 3.5rem;
+    img {
+      width: 100%;
+    }
+
+    @include large-mobile {
+      margin-right: 2rem;
+      width: 15rem;
+    }
+  }
+
+  &__title {
+    color: var(--color-white);
+
+    @include large-mobile {
+      margin-bottom: 1.5rem;
+    }
+  }
+}

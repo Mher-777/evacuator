@@ -1,0 +1,6 @@
+mixin input (label, placeholder, name, text)
+    +e.input__(class=`${icon ? '_icon' : ''}`)&attributes(attributes)
+        if(label)
+            +e.label.p !{label}
+        +e.parent(data-text=text)
+            +e.INPUT.field(name=name placeholder=placeholder type="text" required)

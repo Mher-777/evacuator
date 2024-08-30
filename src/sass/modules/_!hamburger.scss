@@ -1,0 +1,39 @@
+.hamburger {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all linear .2s;
+    fill: var(--color-base);
+    stroke-width: 2px;
+    &-menuClose {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &-menuOpen {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &.is-active {
+    .icon {
+      &-menuClose {
+        opacity: 1;
+        visibility: visible;
+      }
+      &-menuOpen {
+        opacity: 0;
+        visibility: visible;
+      }
+    }
+  }
+}

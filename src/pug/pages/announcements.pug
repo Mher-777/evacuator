@@ -1,0 +1,50 @@
+extends ../layouts/base
+
+append vars
+    - title = 'Создание объявления';
+    - banner = 'Создание объявления';
+
+block content
+    section.announcements
+        .container
+            .announcements__info
+                .announcements__icon
+                    img(src="./app/img/money.svg" alt="money")
+                .announcements__desc Заполните все поля формы на размещение своего объявления на сайте. <br>
+                    | Размещение объявления платное. Стоимость за одно объявление составляет <strong>990 руб.</strong>
+                    | Объявление будет опубликовано на сайте после оплаты и проверки модератором.
+            form(action="").announcements__form
+                +select('Выберете город', 'Москва', 'Киров', 'Самара', 'Саратов', 'Армения').announcements__field
+                +input('Ваше имя', '', 'name').announcements__field
+                +input('Номер мобильного телефона', '+7 (999) 999 99 99', 'phone').announcements__field
+                +input('Номер городского телефона', '+7 (999) 999 99 99', 'phone').announcements__field
+                +input('Ваш email', 'example@gmail.com', 'email').announcements__field
+                +input('Адрес стоянки эвакуатора', '', 'address').announcements__field
+                legend.announcements__title ИНФОРМАЦИЯ
+                +input('Заголовок объявления', 'Не более 50 символов', 'ad_title').announcements__field
+                +textarea('Описание объявления', 'Не более 50 символов', 'ad_desc').announcements__field
+                legend.announcements__title ЦЕНЫ
+                .announcements__row
+                    +input('Легковые автомобили', '', 'passenger_cars', 'рублей').announcements__field
+                    +checkbox('Услугу не оказываю', 'passenger_cars_check').announcements__checkbox
+                .announcements__row
+                    +input('Мототехника', '', 'motor_vehicles', 'рублей').announcements__field
+                    +checkbox('Услугу не оказываю', 'motor_vehicles_check').announcements__checkbox
+                .announcements__row
+                    +input('Внедорожник', '', 'SUV', 'рублей').announcements__field
+                    +checkbox('Услугу не оказываю', 'SUV_check').announcements__checkbox
+                .announcements__row
+                    +input('Микроавтобус', '', 'minibus', 'рублей').announcements__field
+                    +checkbox('Услугу не оказываю', 'minibus_check').announcements__checkbox
+                .announcements__row
+                    +input('Загородный тариф', '', 'country_tariff', 'рублей').announcements__field
+                    +checkbox('Услугу не оказываю', 'country_tariff_check').announcements__checkbox
+                legend.announcements__title ФОТО
+                .announcements__cell
+                    .file-upload
+                        span.file-upload__text Прикрепите фотографию к объявлению
+                        label.file-upload__label
+                            input.file-upload__input.file(type='file')
+                            span.file-upload__btn Загрузить
+                    +checkbox('Я соглашаюсь с правилами использования сервиса, а также с передачей и обработкой моих данных в evarus.ru. Я подтверждаю своё совершеннолетие и ответственность за размещение.', 'agreement').announcements__checkbox
+                    +btn(type="submit").announcements__btn Продолжить

@@ -1,0 +1,40 @@
+.inside {
+  padding: 10rem 0;
+
+  @include large-desktop {
+    padding: 8rem 0;
+  }
+
+  @include large-tablet {
+    padding: 5rem 0;
+  }
+
+  &__title {
+    margin-bottom: 4.5rem;
+
+    @include large-mobile {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__text {
+    @include line-height(26, 31);
+
+    @include large-desktop {
+      @include line-height(24, 28);
+    }
+
+    @include large-tablet {
+      @include line-height(21, 25);
+    }
+
+    @include large-mobile {
+      font-size: inherit;
+    }
+  }
+
+  &__items {
+    gap: 2.4rem;
+    margin-top: 3rem;
+  }
+}

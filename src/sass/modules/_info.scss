@@ -1,0 +1,94 @@
+.info {
+  background-color: var(--color-primary);
+  overflow: hidden;
+
+  &__content {
+    max-width: 64.5rem;
+    padding: 6rem 0;
+    @include line-height(26, 31);
+
+    @include large-desktop {
+      @include line-height(24, 28);
+      max-width: 57.5rem;
+    }
+
+    @include large-tablet {
+      @include line-height(21, 25);
+      padding: 4rem 0;
+    }
+
+    @include large-mobile {
+      font-size: inherit;
+    }
+  }
+
+  &__row {
+    display: flex;
+    position: relative;
+
+    @include large-mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    position: relative;
+
+    &_right {
+      margin-right: -26rem;
+      margin-left: 5.5rem;
+
+      @include large-tablet {
+        margin-left: 3rem;
+      }
+
+      @include large-mobile {
+        order: -1;
+      }
+    }
+
+    &_left {
+      margin-left: -26rem;
+      margin-right: 5.5rem;
+
+      @include large-tablet {
+        margin-right: 3rem;
+      }
+    }
+
+    @include large-mobile {
+      margin: 0 -2rem 0;
+      padding-top: 330 / 393 * 100%;
+      width: auto;
+    }
+  }
+
+  &__text {
+    margin-bottom: 2.5rem;
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 3rem;
+    @include large-mobile {
+      margin-bottom: 2rem;
+    }
+    .icon {
+      width: 3.2rem;
+      height: 3.2rem;
+      flex-shrink: 0;
+      margin-right: 1.5rem;
+
+      @include large-mobile {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+}

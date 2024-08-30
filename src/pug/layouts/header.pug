@@ -1,0 +1,14 @@
+header.header
+    .header__inner.flex.flex_justify.flex_vertical
+        .logo.header__logo
+            a(href="#").logo__link
+                img(src="./app/img/logo.svg" alt="logo").logo__image
+        include ../modules/menu
+        +btn('./announcements.html').header__btn Добавить объявление
+        button.hamburger.header__hamburger(type='button' aria-label='open close menu')
+            +icon('menuOpen')
+            +icon('menuClose')
+    .header__banner
+        .header__bg.absolute
+            img(src="/img/header_bg.jpg" alt="Здесь может быть ваш эвакуатор").object-fit
+        h2.header__title !{banner}

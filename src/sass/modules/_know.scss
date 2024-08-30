@@ -1,0 +1,70 @@
+.know {
+  padding: 10rem 0;
+  background-color: var(--color-primary);
+
+  @include large-desktop {
+    padding: 8rem 0;
+  }
+
+  @include large-tablet {
+    padding: 5rem 0;
+  }
+
+  &__title {
+    margin-bottom: 4.5rem;
+
+    @include large-mobile {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    gap: 4rem;
+
+    @include large-mobile {
+      display: block;
+    }
+  }
+
+  &__cell {
+    flex: 1 1 50%;
+
+    @include large-mobile {
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__image {
+    max-width: 34.7rem;
+    margin: 0 auto 3rem;
+
+    @include large-tablet {
+      max-width: 25rem;
+      margin-bottom: 2rem;
+    }
+
+    @include large-mobile {
+      max-width: 20rem;
+      margin-left: 0;
+    }
+  }
+
+  &__text {
+    @include line-height(26, 31);
+
+    @include large-desktop {
+      @include line-height(24, 28);
+    }
+
+    @include large-tablet {
+      @include line-height(21, 25);
+    }
+
+    @include large-mobile {
+      font-size: inherit;
+    }
+  }
+}

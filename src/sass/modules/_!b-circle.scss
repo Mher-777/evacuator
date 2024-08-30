@@ -1,0 +1,33 @@
+.b-circle {
+  display: inline-block;
+  border: .4rem solid #35ACDD;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20.16%;
+  padding-top: 20.16%;
+  will-change: transform, opacity;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: opacity 0s ease 0s, transform .7s ease-out 0s;
+  background-color: #35ACDD;
+
+  transform: scale(0);
+
+  // -webkit-transform: translateZ(0) scale(0);
+  // -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
+
+  &_pause {
+    // transition: opacity 0.1s ease 0s;
+    // animation-play-state: paused;
+    // opacity: 0;
+    transition: opacity 0s ease 0s, transform 0.5s ease-out 0s;
+    transform: scale(0) !important;
+    // visibility: hidden;
+  }
+
+  &.js-start {
+    // animation: buttonLine 1.2s 1 ease-out;
+    // animation-fill-mode: forwards;
+  }
+}

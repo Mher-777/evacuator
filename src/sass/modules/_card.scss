@@ -1,0 +1,201 @@
+.card {
+  padding: 4rem 4.8rem;
+  background: var(--color-white);
+  box-shadow: .2rem .2rem 1rem .2rem rgba(39, 52, 58, 0.15);
+  border-radius: 2rem;
+
+  @include large-tablet {
+    padding: 2rem 2.5rem;
+  }
+
+  @include large-tablet {
+    padding: 1.5rem 1rem;
+  }
+
+  &__top {
+    margin-bottom: 2.5rem;
+
+    @include large-mobile {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-size: 3.2rem;
+    font-weight: 700;
+
+    @include large-mobile {
+      font-size: 2.8rem;
+    }
+  }
+
+  &__image {
+    position: relative;
+    margin-right: 2.8rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    max-width: 41.4rem;
+    width: 100%;
+
+    @include large-desktop {
+      max-width: 35rem;
+    }
+
+    @include large-tablet {
+      max-width: 37rem;
+    }
+
+    @include large-mobile {
+      padding-top: 265 / 333 * 100%;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__main {
+    display: flex;
+
+    @include large-tablet {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__cell {
+    &_left {
+      flex: 1 1 94rem;
+      display: flex;
+
+      @include large-mobile {
+        display: block;
+      }
+    }
+
+    &_right {
+      flex: 1 1 33.5rem;
+      padding-left: 2.8rem;
+
+      @include large-tablet {
+        padding-left: 0;
+        padding-top: 2rem;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 49.8rem;
+    width: 100%;
+
+    @include large-desktop {
+      font-size: 1.6rem;
+    }
+
+    @include large-mobile {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 auto;
+    padding: 1.5rem 2rem;
+    background-color: #F2F4F8;
+    border-radius: 1rem;
+    color: #777777;
+
+    span {
+
+    }
+
+    strong {
+      font-weight: 700;
+      text-align: right;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 1.2rem;
+  }
+
+  &__address {
+    margin-top: .9rem;
+    background-color: var(--color-primary);
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+
+    &-location {
+      color: #777777;
+      display: flex;
+      margin-bottom: 1rem;
+      .icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: currentColor;
+        margin-right: .4rem;
+
+        @include large-mobile {
+          width: 2rem;
+          height: 2rem;
+
+        }
+      }
+    }
+    
+    &-text {
+      color: #1B1E1F;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  &__link {
+    margin-top: 2rem;
+    min-height: 7rem;
+    padding: 1.5rem 3.5rem;
+    width: 100%;
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+    border-radius: 5rem;
+    text-align: center;
+    display: block;
+    transition: all linear .2s;
+
+    &:hover {
+      border-color: #35ACDD;
+      color: #35ACDD;
+
+      strong {
+        text-decoration: none;
+      }
+    }
+
+    span {
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: .4rem;
+    }
+
+    strong {
+      font-size: 1.6rem;
+      text-decoration-line: underline;
+      text-decoration-skip-ink: none;
+      display: block;
+    }
+  }
+
+  &__bottom {
+    margin-top: 2.8rem;
+
+    @include large-mobile {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 1.4rem;
+    }
+  }
+}

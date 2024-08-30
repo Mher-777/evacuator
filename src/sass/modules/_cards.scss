@@ -1,0 +1,45 @@
+.cards {
+  padding: 9.5rem 0 8rem;
+
+  @include large-desktop {
+    padding: 7rem 0;
+  }
+
+  @include large-tablet {
+    padding: 5rem 0;
+  }
+
+  @include large-mobile {
+    padding: 4rem 0;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 4.4rem;
+
+    @include large-desktop {
+      gap: 3rem;
+    }
+
+    @include large-mobile {
+      gap: 2rem;
+    }
+  }
+
+  &__pagination {
+    margin-top: 6rem;
+
+    @include large-desktop {
+      margin-top: 4.5rem;
+    }
+
+    @include large-tablet {
+      margin-top: 3rem;
+    }
+
+    @include large-mobile {
+      margin-top: 2.5rem;
+    }
+  }
+}

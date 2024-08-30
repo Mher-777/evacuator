@@ -1,0 +1,7 @@
+mixin checkbox(value, name, checked = false, required = true)
+    +e.LABEL.checkbox__()&attributes(attributes)
+        +e.INPUT.input(checked=checked data-rule-required=required value=value name=name type="checkbox")
+        +e.SPAN.text
+            +e.arrow
+                +icon('checked')
+            | !{value}

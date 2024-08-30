@@ -1,0 +1,13 @@
+mixin btn(link = false)
+    if (link)
+        a(href=link).js-btn.btn&attributes(attributes)
+            .btn__back.js-circles
+            span.btn__text
+                if block
+                    block
+    else
+        button(type="button").js-btn.btn&attributes(attributes)
+            .btn__back.js-circles
+            span.btn__text
+                if block
+                    block

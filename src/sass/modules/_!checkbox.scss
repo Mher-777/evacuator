@@ -1,0 +1,86 @@
+.checkbox {
+  display: block;
+  user-select: none;
+  font-size: 2.2rem;
+
+  @include large-mobile {
+    font-size: 1.6rem;
+  }
+
+  .input__error {
+    display: none;
+  }
+
+  &__input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+
+    &:checked {
+      & ~ .checkbox__text {
+        .checkbox__arrow {
+          .icon {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &.just-validate-error-field {
+      & ~ .checkbox__text {
+        .checkbox__arrow {
+          border-color: #B80101;
+        }
+      }
+    }
+  }
+
+  &__text {
+    cursor: pointer;
+    padding-left: 3.5rem;
+    position: relative;
+    display: block;
+    color: #4A585E;
+    a {
+      color: var(--color-accent);
+      text-decoration-line: underline;
+    }
+  }
+
+  &__arrow {
+    min-width: 2.4rem;
+    height: 2.4rem;
+    flex-shrink: 0;
+    margin-right: 1.3rem;
+    border-radius: 0.4rem;
+    border: 1px solid var(--color-accent);
+    background-color: var(--color-white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease 0.2s;
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+    @include large-mobile {
+      margin-top: -.3rem;
+    }
+    .icon {
+      width: 1.6rem;
+      height: 1.1rem;
+      opacity: 0;
+      transition: ease 0.2s;
+      fill: none;
+      stroke: var(--color-accent);
+    }
+  }
+
+  &.error {
+    color: var(--color-error);
+
+    .checkbox__arrow {
+      border-color: var(--color-error);
+    }
+  }
+}
